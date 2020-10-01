@@ -1,0 +1,88 @@
+{
+  "classes": {
+    "Barbarian": {
+      "Hit Die": "d12",
+      "Saves": [
+        "Constitution",
+        "Strength"
+      ]
+    },
+    "Bard": {
+      "Hit Die": "d8",
+      "Saves": [
+        "Charisma",
+        "Dexterity"
+      ]
+    },
+    "Cleric": {
+      "Hit Die": "d8",
+      "Saves": [
+        "Charisma",
+        "Wisdom"
+      ]
+    },
+    "Druid": {
+      "Hit Die": "d8",
+      "Saves": [
+        "Intelligence",
+        "Wisdom"
+      ]
+    },
+    "Fighter": {
+      "Hit Die": "d10",
+      "Saves": [
+        "Constitution",
+        "Strength"
+      ]
+    },
+    "Monk": {
+      "Hit Die": "d8",
+      "Saves": [
+        "Dexterity",
+        "Strength"
+      ]
+    },
+    "Paladin": {
+      "Hit Die": "d10",
+      "Saves": [
+        "Charisma",
+        "Wisdom"
+      ]
+    },
+    "Ranger": {
+      "Hit Die": "d10",
+      "Saves": [
+        "Dexterity",
+        "Strength"
+      ]
+    },
+    "Rogue": {
+      "Hit Die": "d8",
+      "Saves": [
+        "Dexterity",
+        "Intelligence"
+      ]
+    },
+    "Sorcerer": {
+      "Hit Die": "d6",
+      "Saves": [
+        "Charisma",
+        "Constitution"
+      ]
+    },
+    "Warlock": {
+      "Hit Die": "d8",
+      "Saves": [
+        "Charisma",
+        "Wisdom"
+      ]
+    },
+    "Wizard": {
+      "Hit Die": "d6",
+      "Saves": [
+        "Intelligence",
+        "Wisdom"
+      ]
+    }
+  }
+}
