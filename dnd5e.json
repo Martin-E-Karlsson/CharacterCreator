@@ -1,7 +1,14 @@
 {
-  "classes": {
+  "Class": {
     "Barbarian": {
       "Hit Die": "d12",
+      "Proficiencies": {
+        "Armor": [
+          "Light armor",
+          "Medium armor",
+          "Shields"
+        ]
+      },
       "Saves": [
         "Constitution",
         "Strength"
@@ -9,6 +16,11 @@
     },
     "Bard": {
       "Hit Die": "d8",
+      "Proficiencies": {
+        "Armor": [
+          "Light armor"
+        ]
+      },
       "Saves": [
         "Charisma",
         "Dexterity"
@@ -16,6 +28,13 @@
     },
     "Cleric": {
       "Hit Die": "d8",
+      "Proficiencies": {
+        "Armor": [
+          "Light armor",
+          "Medium armor",
+          "Shields"
+        ]
+      },
       "Saves": [
         "Charisma",
         "Wisdom"
@@ -23,6 +42,13 @@
     },
     "Druid": {
       "Hit Die": "d8",
+      "Proficiencies": {
+        "Armor": [
+          "Light armor",
+          "Medium armor",
+          "Shields"
+        ]
+      },
       "Saves": [
         "Intelligence",
         "Wisdom"
@@ -30,6 +56,14 @@
     },
     "Fighter": {
       "Hit Die": "d10",
+      "Proficiencies": {
+        "Armor": [
+          "Light armor",
+          "Medium armor",
+          "Heavy armor",
+          "Shields"
+        ]
+      },
       "Saves": [
         "Constitution",
         "Strength"
@@ -37,6 +71,9 @@
     },
     "Monk": {
       "Hit Die": "d8",
+      "Proficiencies": {
+        "Armor": []
+      },
       "Saves": [
         "Dexterity",
         "Strength"
@@ -44,6 +81,14 @@
     },
     "Paladin": {
       "Hit Die": "d10",
+      "Proficiencies": {
+        "Armor": [
+          "Light armor",
+          "Medium armor",
+          "Heavy armor",
+          "Shields"
+        ]
+      },
       "Saves": [
         "Charisma",
         "Wisdom"
@@ -51,6 +96,13 @@
     },
     "Ranger": {
       "Hit Die": "d10",
+      "Proficiencies": {
+        "Armor": [
+          "Light armor",
+          "Medium armor",
+          "Shields"
+        ]
+      },
       "Saves": [
         "Dexterity",
         "Strength"
@@ -58,6 +110,11 @@
     },
     "Rogue": {
       "Hit Die": "d8",
+      "Proficiencies": {
+        "Armor": [
+          "Light armor"
+        ]
+      },
       "Saves": [
         "Dexterity",
         "Intelligence"
@@ -65,6 +122,9 @@
     },
     "Sorcerer": {
       "Hit Die": "d6",
+      "Proficiencies": {
+        "Armor": []
+      },
       "Saves": [
         "Charisma",
         "Constitution"
@@ -72,6 +132,11 @@
     },
     "Warlock": {
       "Hit Die": "d8",
+      "Proficiencies": {
+        "Armor": [
+          "Light armor"
+        ]
+      },
       "Saves": [
         "Charisma",
         "Wisdom"
@@ -79,6 +144,9 @@
     },
     "Wizard": {
       "Hit Die": "d6",
+      "Proficiencies": {
+        "Armor": []
+      },
       "Saves": [
         "Intelligence",
         "Wisdom"
