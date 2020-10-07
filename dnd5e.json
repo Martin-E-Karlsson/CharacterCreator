@@ -6,8 +6,21 @@
         "Armor": [
           "Light armor",
           "Medium armor",
-          "Shields"],
-        "Tools": []
+          "Shields"
+        ],
+        "Skills": [
+          "Animal Handling",
+          "Athletics",
+          "Intimidation",
+          "Nature",
+          "Perception",
+          "Survival"
+        ],
+        "Tools": [],
+        "Weapons": [
+          "Simple weapons",
+          "Martial weapons"
+        ]
       },
       "Saves": [
         "Constitution",
@@ -22,6 +35,26 @@
           "Medium armor",
           "Shields"
         ],
+        "Skills": [
+          "Athletics",
+          "Acrobatics",
+          "Sleight of Hand",
+          "Stealth",
+          "Arcana",
+          "History",
+          "Investigation",
+          "Nature",
+          "Religion",
+          "Animal Handling",
+          "Insight",
+          "Medicine",
+          "Perception",
+          "Survival",
+          "Deception",
+          "Intimidation",
+          "Performance",
+          "Persuasion"
+        ],
         "Tools": [
           "Bagpipes",
           "Drum",
@@ -33,6 +66,13 @@
           "Pan flute",
           "Shawm",
           "Viol"
+        ],
+        "Weapons": [
+          "Simple weapons",
+          "Hand crossbows",
+          "Longswords",
+          "Rapiers",
+          "Shortswords"
         ]
       },
       "Saves": [
@@ -48,7 +88,17 @@
           "Medium armor",
           "Shields"
         ],
-        "Tools": []
+        "Skills": [
+          "History",
+          "Insight",
+          "Medicine",
+          "Persuasion",
+          "Religion"
+        ],
+        "Tools": [],
+        "Weapons": [
+          "Simple weapons"
+        ]
       },
       "Saves": [
         "Charisma",
@@ -64,8 +114,30 @@
           "Heavy armor",
           "Shields"
         ],
+        "Skills": [
+          "Arcana",
+          "Animal Handling",
+          "Insight",
+          "Medicine",
+          "Nature",
+          "Perception",
+          "Religion",
+          "Survival"
+        ],
         "Tools": [
           "Herbalism kit"
+        ],
+        "Weapons": [
+          "Clubs",
+          "Daggers",
+          "Darts",
+          "Javelins",
+          "Maces",
+          "Quarterstaves",
+          "Scimitars",
+          "Sickles",
+          "Slings",
+          "Spears"
         ]
       },
       "Saves": [
@@ -82,7 +154,21 @@
           "Heavy armor",
           "Shields"
         ],
-        "Tools": []
+        "Skills": [
+          "Acrobatics",
+          "Animal Handling",
+          "Athletics",
+          "History",
+          "Insight",
+          "Intimidation",
+          "Perception",
+          "Survival"
+        ],
+        "Tools": [],
+        "Weapons": [
+          "Simple weapons",
+          "Martial weapons"
+        ]
       },
       "Saves": [
         "Constitution",
@@ -93,6 +179,14 @@
       "Hit Die": "d8",
       "Proficiencies": {
         "Armor": [],
+        "Skills": [
+          "Acrobatics",
+          "Athletics",
+          "History",
+          "Insight",
+          "Religion",
+          "Stealth"
+        ],
         "Tools": [
           "Bagpipes",
           "Drum",
@@ -121,6 +215,10 @@
           "Tinker's tools",
           "Weaver's tools",
           "Woodcarver's tools"
+        ],
+        "Weapons": [
+          "Simple weapons",
+          "Shortswords"
         ]
       },
       "Saves": [
@@ -137,7 +235,19 @@
           "Heavy armor",
           "Shields"
         ],
-        "Tools": []
+        "Skills": [
+          "Athletics",
+          "Insight",
+          "Intimidation",
+          "Medicine",
+          "Persuasion",
+          "Religion"
+        ],
+        "Tools": [],
+        "Weapons": [
+          "Simple weapons",
+          "Martial Weapons"
+        ]
       },
       "Saves": [
         "Charisma",
@@ -152,7 +262,21 @@
           "Medium armor",
           "Shields"
         ],
-        "Tools": []
+        "Skills": [
+          " Animal Handling",
+          "Athletics",
+          "Insight",
+          "Investigation",
+          "Nature",
+          "Perception",
+          "Stealth",
+          "Survival"
+        ],
+        "Tools": [],
+        "Weapons": [
+          "Simple weapons",
+          "Martial weapons"
+        ]
       },
       "Saves": [
         "Dexterity",
@@ -165,8 +289,28 @@
         "Armor": [
           "Light armor"
         ],
+        "Skills": [
+          "Acrobatics",
+          "Athletics",
+          "Deception",
+          "Insight",
+          "Intimidation",
+          "Investigation",
+          "Perception",
+          "Performance",
+          "Persuasion",
+          "Sleight of Hand",
+          "Stealth"
+        ],
         "Tools": [
           "Thieves' Tools"
+        ],
+        "Weapons": [
+          "Simple weapons",
+          "Hand crossbows",
+          "Longswords",
+          "Rapiers",
+          "Shortswords"
         ]
       },
       "Saves": [
@@ -178,7 +322,22 @@
       "Hit Die": "d6",
       "Proficiencies": {
         "Armor": [],
-        "Tools": []
+        "Skills": [
+          "Arcana",
+          "Deception",
+          "Insight",
+          "Intimidation",
+          "Persuasion",
+          "Religion"
+        ],
+        "Tools": [],
+        "Weapons": [
+          "Daggers",
+          "Darts",
+          "Slings",
+          "Quarterstaves",
+          "Light crossbows"
+        ]
       },
       "Saves": [
         "Charisma",
@@ -191,7 +350,19 @@
         "Armor": [
           "Light armor"
         ],
-        "Tools": []
+        "Skills": [
+          "Arcana",
+          "Deception",
+          "History",
+          "Intimidation",
+          "Investigation",
+          "Nature",
+          "Religion"
+        ],
+        "Tools": [],
+        "Weapons": [
+          "Simple weapons"
+        ]
       },
       "Saves": [
         "Charisma",
@@ -202,7 +373,22 @@
       "Hit Die": "d6",
       "Proficiencies": {
         "Armor": [],
-        "Tools": []
+        "Skills": [
+          "Arcana",
+          "History",
+          "Insight",
+          "Investigation",
+          "Medicine",
+          "Religion"
+        ],
+        "Tools": [],
+        "Weapons": [
+          "Daggers",
+          "Darts",
+          "Slings",
+          "Quarterstaves",
+          "Light crossbows"
+        ]
       },
       "Saves": [
         "Intelligence",

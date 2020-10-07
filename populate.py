@@ -27,16 +27,24 @@ def add_values_to_classes(json_data, path):
     return json_data
 
 
+def add_list_to_classes(json_data, path):
+    for key in json_data["Class"].keys():
+        new_value = input(f"{key} {path[-1]}: ")
+        add_value(json_data, ["Class", key, path[0]], {path[1]: new_value.split(", ")})
+
+    return json_data
+
+
 def fetch_value(data, keys):
     return fetch_value(data[keys[0]], keys[1:]) \
         if keys else data
 
 
-def run():
+def run():  # TODO: Add more values.
     with open('dnd5e.json') as f:
         data_in = json.load(f)
 
-    data_out = add_values_to_classes(data_in, ["Proficiencies", "Weapons"])
+    data_out = add_list_to_classes(data_in, ["Proficiencies", "Skills"])
 
     with open('dnd5e.json', 'w') as f:
         json.dump(data_out, f, indent=2, sort_keys=True)
