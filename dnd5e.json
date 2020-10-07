@@ -6,8 +6,8 @@
         "Armor": [
           "Light armor",
           "Medium armor",
-          "Shields"
-        ]
+          "Shields"],
+        "Tools": []
       },
       "Saves": [
         "Constitution",
@@ -18,7 +18,21 @@
       "Hit Die": "d8",
       "Proficiencies": {
         "Armor": [
-          "Light armor"
+          "Light armor",
+          "Medium armor",
+          "Shields"
+        ],
+        "Tools": [
+          "Bagpipes",
+          "Drum",
+          "Dulcimer",
+          "Flute",
+          "Lute",
+          "Lyre",
+          "Horn",
+          "Pan flute",
+          "Shawm",
+          "Viol"
         ]
       },
       "Saves": [
@@ -33,7 +47,8 @@
           "Light armor",
           "Medium armor",
           "Shields"
-        ]
+        ],
+        "Tools": []
       },
       "Saves": [
         "Charisma",
@@ -46,7 +61,11 @@
         "Armor": [
           "Light armor",
           "Medium armor",
+          "Heavy armor",
           "Shields"
+        ],
+        "Tools": [
+          "Herbalism kit"
         ]
       },
       "Saves": [
@@ -62,7 +81,8 @@
           "Medium armor",
           "Heavy armor",
           "Shields"
-        ]
+        ],
+        "Tools": []
       },
       "Saves": [
         "Constitution",
@@ -72,7 +92,36 @@
     "Monk": {
       "Hit Die": "d8",
       "Proficiencies": {
-        "Armor": []
+        "Armor": [],
+        "Tools": [
+          "Bagpipes",
+          "Drum",
+          "Dulcimer",
+          "Flute",
+          "Lute",
+          "Lyre",
+          "Horn",
+          "Pan flute",
+          "Shawm",
+          "Viol",
+          "Alchemist's supplies",
+          "Brewer's supplies",
+          "Calligrapher's Supplies",
+          "Carpenter's tools",
+          "Cartographer's tools",
+          "Cobbler's tools",
+          "Cook's utensils",
+          "Glassblower's tools",
+          "Jeweler's tools",
+          "Leatherworker's tools",
+          "Mason's tools",
+          "Painter's supplies",
+          "Potter's tools",
+          "Smith's tools",
+          "Tinker's tools",
+          "Weaver's tools",
+          "Woodcarver's tools"
+        ]
       },
       "Saves": [
         "Dexterity",
@@ -87,7 +136,8 @@
           "Medium armor",
           "Heavy armor",
           "Shields"
-        ]
+        ],
+        "Tools": []
       },
       "Saves": [
         "Charisma",
@@ -101,7 +151,8 @@
           "Light armor",
           "Medium armor",
           "Shields"
-        ]
+        ],
+        "Tools": []
       },
       "Saves": [
         "Dexterity",
@@ -113,6 +164,9 @@
       "Proficiencies": {
         "Armor": [
           "Light armor"
+        ],
+        "Tools": [
+          "Thieves' Tools"
         ]
       },
       "Saves": [
@@ -123,7 +177,8 @@
     "Sorcerer": {
       "Hit Die": "d6",
       "Proficiencies": {
-        "Armor": []
+        "Armor": [],
+        "Tools": []
       },
       "Saves": [
         "Charisma",
@@ -135,7 +190,8 @@
       "Proficiencies": {
         "Armor": [
           "Light armor"
-        ]
+        ],
+        "Tools": []
       },
       "Saves": [
         "Charisma",
@@ -145,7 +201,8 @@
     "Wizard": {
       "Hit Die": "d6",
       "Proficiencies": {
-        "Armor": []
+        "Armor": [],
+        "Tools": []
       },
       "Saves": [
         "Intelligence",

@@ -5,12 +5,12 @@ import json
 def add_value(json_data, path, value):
     for key in path[:-1]:
         json_data = json_data.setdefault(key, {})
-    json_data[path[-1]] = value
 
+    json_data[path[-1]].update(value)
     return json_data
 
 
-def add_values_classes(json_data, path):
+def add_values_to_classes(json_data, path):
     for key in json_data["Class"].keys():
         values_list = []
         count = 0
@@ -36,7 +36,7 @@ def run():
     with open('dnd5e.json') as f:
         data_in = json.load(f)
 
-    data_out = add_values_classes(data_in, ["Proficiencies", "Armor"])
+    data_out = add_values_to_classes(data_in, ["Proficiencies", "Weapons"])
 
     with open('dnd5e.json', 'w') as f:
         json.dump(data_out, f, indent=2, sort_keys=True)
