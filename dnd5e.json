@@ -1,6 +1,71 @@
 {
   "Class": {
     "Barbarian": {
+      "Features": {
+        "Level 1": {
+          "Rage": "",
+          "Unarmored Defense": ""
+        },
+        "Level 10": {
+          "Path Feature": ""
+        },
+        "Level 11": {
+          "Relentless Rage": ""
+        },
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {
+          "Brutal Critical": ""
+        },
+        "Level 14": {
+          "Path Feature": ""
+        },
+        "Level 15": {
+          "Persistent Rage": ""
+        },
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {
+          "Brutal Critical": ""
+        },
+        "Level 18": {
+          "Indomitable Might": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Danger Sense": "",
+          "Reckless Attack": ""
+        },
+        "Level 20": {
+          "Primal Champion": ""
+        },
+        "Level 3": {
+          "Primal Path": ""
+        },
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {
+          "Extra Attack": "",
+          "Fast Movement": ""
+        },
+        "Level 6": {
+          "Path Feature": ""
+        },
+        "Level 7": {
+          "Feral Instinct": ""
+        },
+        "Level 8": {
+          "Ability Score Improvement": ""
+        },
+        "Level 9": {
+          "Brutal Critical": ""
+        }
+      },
       "Hit Die": "d12",
       "Proficiencies": {
         "Armor": [
@@ -28,6 +93,73 @@
       ]
     },
     "Bard": {
+      "Features": {
+        "Level 1": {
+          "Bardic Inspiration": "",
+          "Spellcasting": ""
+        },
+        "Level 10": {
+          "Bardic Inspiration":  "",
+          "Expertise":  "",
+          "Magical Secrets": ""
+        },
+        "Level 11": {},
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {
+          "Song of Rest ": ""
+        },
+        "Level 14": {
+          "Bard College Feature": "",
+          "Expertise": "",
+          "Magical Secrets": ""
+        },
+        "Level 15": {
+          "Bardic Inspiration": ""
+        },
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {
+          "Song of Rest": ""
+        },
+        "Level 18": {
+          "Magical Secrets": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Jack of All Trades": "",
+          "Song of Rest": ""
+        },
+        "Level 20": {
+          "Superior Inspiration": ""
+        },
+        "Level 3": {
+          "Bard College": "",
+          "Expertise": ""
+        },
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {
+          "Bardic Inspiration": "",
+          "Font of Inspiration": ""
+        },
+        "Level 6": {
+          "Bard College Feature": "",
+          "Countercharm": ""
+        },
+        "Level 7": {},
+        "Level 8": {
+          "Ability Score Improvement": ""
+        },
+        "Level 9": {
+          "Song of Rest": ""
+        }
+      },
       "Hit Die": "d8",
       "Proficiencies": {
         "Armor": [
@@ -81,6 +213,64 @@
       ]
     },
     "Cleric": {
+      "Features": {
+        "Level 1": {
+          "Divine Domain": "",
+          "Spellcasting": ""
+        },
+        "Level 10": {
+          "Divine Intervention": ""
+        },
+        "Level 11": {
+          "Destroy Undead": ""
+        },
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {},
+        "Level 14": {
+          "Destroy Undead": ""
+        },
+        "Level 15": {},
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {
+          "Destroy Undead": "",
+          "Divine Domain Feature": ""
+        },
+        "Level 18": {
+          "Channel Divinity": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Channel Divinity": "",
+          "Divine Domain Feature": ""
+        },
+        "Level 20": {
+          "Divine Intervention Improvement": ""
+        },
+        "Level 3": {},
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {
+          "Destroy Undead": ""
+        },
+        "Level 6": {
+          "Channel Divinity": "",
+          "Divine Domain Feature": ""
+        },
+        "Level 7": {},
+        "Level 8": {
+          "Ability Score Improvement": "",
+          "Destroy Undead": "",
+          "Divine Domain Feature": ""
+        },
+        "Level 9": {}
+      },
       "Hit Die": "d8",
       "Proficiencies": {
         "Armor": [
@@ -106,6 +296,57 @@
       ]
     },
     "Druid": {
+      "Features": {
+        "Level 1": {
+          "Druidic": "",
+          "Spellcasting": ""
+        },
+        "Level 10": {
+          "Druid Circle Feature": ""
+        },
+        "Level 11": {},
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {},
+        "Level 14": {
+          "Druid Circle Feature": ""
+        },
+        "Level 15": {},
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {},
+        "Level 18": {
+          "Beast Spells": "",
+          "Timeless Body": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Druid Circle": "",
+          "Wild Shape": ""
+        },
+        "Level 20": {
+          "Archdruid": ""
+        },
+        "Level 3": {},
+        "Level 4": {
+          "Ability Score Improvement": "",
+          "Wild Shape Improvement": ""
+        },
+        "Level 5": {},
+        "Level 6": {
+          "Druid Circle Feature": ""
+        },
+        "Level 7": {},
+        "Level 8": {
+          "Ability Score Improvement": "",
+          "Wild Shape Improvement": ""
+        },
+        "Level 9": {}
+      },
       "Hit Die": "d8",
       "Proficiencies": {
         "Armor": [
@@ -146,6 +387,70 @@
       ]
     },
     "Fighter": {
+      "Features": {
+        "Level 1": {
+          "Fighting Style": "",
+          "Second Wind": ""
+        },
+        "Level 10": {
+          "Martial Archetype Feature": ""
+        },
+        "Level 11": {
+          "Extra Attack": ""
+        },
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {
+          "Indomitable": ""
+        },
+        "Level 14": {
+          "Ability Score Improvement": ""
+        },
+        "Level 15": {
+          "Martial Archetype Feature": ""
+        },
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {
+          "Action Surge": "",
+          "Indomitable": ""
+        },
+        "Level 18": {
+          "Martial Archetype Feature": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Action Surge": ""
+        },
+        "Level 20": {
+          "Extra Attack": ""
+        },
+        "Level 3": {
+          "Martial Archetype": ""
+        },
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {
+          "Extra Attack": ""
+        },
+        "Level 6": {
+          "Ability Score Improvement": ""
+        },
+        "Level 7": {
+          "Martial Archetype Feature": ""
+        },
+        "Level 8": {
+          "Ability Score Improvement": ""
+        },
+        "Level 9": {
+          "Indomitable": ""
+        }
+      },
       "Hit Die": "d10",
       "Proficiencies": {
         "Armor": [
@@ -176,6 +481,73 @@
       ]
     },
     "Monk": {
+      "Features": {
+        "Level 1": {
+          "Martial Arts": "",
+          "Unarmored Defense": ""
+        },
+        "Level 10": {
+          "Purity of Body": ""
+        },
+        "Level 11": {
+          "Monastic Tradition Feature": ""
+        },
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {
+          "Tongue of the Sun and Moon": ""
+        },
+        "Level 14": {
+          "Diamond Soul": ""
+        },
+        "Level 15": {
+          "Timeless Body": ""
+        },
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {},
+        "Level 18": {
+          "Empty Body": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Ki": "",
+          "Unarmored Movement": ""
+        },
+        "Level 20": {
+          "Perfect Self": ""
+        },
+        "Level 3": {
+          "Monastic Tradition":  "",
+          "Deflect Missiles":  ""
+        },
+        "Level 4": {
+          "Ability Score Improvement": "",
+          "Slow Fall": ""
+        },
+        "Level 5": {
+          "Extra Attack": "",
+          "Stunning Strike": ""
+        },
+        "Level 6": {
+          "Ki-Empowered Strikes": "",
+          "Monastic Tradition Feature": ""
+        },
+        "Level 7": {
+          "Evasion": "",
+          "Stillness of Mind": ""
+        },
+        "Level 8": {
+          "Ability Score Improvement": ""
+        },
+        "Level 9": {
+          "Unarmored Movement Improvement": ""
+        }
+      },
       "Hit Die": "d8",
       "Proficiencies": {
         "Armor": [],
@@ -227,6 +599,66 @@
       ]
     },
     "Paladin": {
+      "Features": {
+        "Level 1": {
+          "Divine Sense": "",
+          "Lay on Hands": ""
+        },
+        "Level 10": {
+          "Aura of Courage": ""
+        },
+        "Level 11": {
+          "Improved Divine Smite": ""
+        },
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {},
+        "Level 14": {
+          "Cleansing Touch": ""
+        },
+        "Level 15": {
+          "Sacred Oath Feature": ""
+        },
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {},
+        "Level 18": {
+          "Aura Improvements": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Divine Smite": "",
+          "Fighting Style": "",
+          "Spellcasting": ""
+        },
+        "Level 20": {
+          "Sacred Oath Feature": ""
+        },
+        "Level 3": {
+          "Divine Health": "",
+          "Sacred Oath": ""
+        },
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {
+          "Extra Attack": ""
+        },
+        "Level 6": {
+          "Aura of Protection": ""
+        },
+        "Level 7": {
+          "Sacred Oath Feature": ""
+        },
+        "Level 8": {
+          "Ability Score Improvement": ""
+        },
+        "Level 9": {}
+      },
       "Hit Die": "d10",
       "Proficiencies": {
         "Armor": [
@@ -255,6 +687,69 @@
       ]
     },
     "Ranger": {
+      "Features": {
+        "Level 1": {
+          "Favored Enemy": "",
+          "Natural Explorer": ""
+        },
+        "Level 10": {
+          "Hide in Plain Sight": "",
+          "Natural Explorer Improvement": ""
+        },
+        "Level 11": {
+          "Ranger Archetype Feature": ""
+        },
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {},
+        "Level 14": {
+          "Favored Enemy Improvement": "",
+          "Vanish": ""
+        },
+        "Level 15": {
+          "Ranger Archetype Feature": ""
+        },
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {},
+        "Level 18": {
+          "Feral Senses": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Fighting Style": "",
+          "Spellcasting": ""
+        },
+        "Level 20": {
+          "Foe Slayer": ""
+        },
+        "Level 3": {
+          "Primeval Awareness": "",
+          "Ranger Archetype": ""
+        },
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {
+          "Extra Attack": ""
+        },
+        "Level 6": {
+          "Favored Enemy Improvement": "",
+          "Natural Explorer Improvement": ""
+        },
+        "Level 7": {
+          "Ranger Archetype Feature": ""
+        },
+        "Level 8": {
+          "Ability Score Improvement": "",
+          "Land's Stride": ""
+        },
+        "Level 9": {}
+      },
       "Hit Die": "d10",
       "Proficiencies": {
         "Armor": [
@@ -284,6 +779,70 @@
       ]
     },
     "Rogue": {
+      "Features": {
+        "Level 1": {
+          "Expertise": "",
+          "Sneak Attack": "",
+          "Thieves' Cant": ""
+        },
+        "Level 10": {
+          "Ability Score Improvement": ""
+        },
+        "Level 11": {
+          "Reliable Talent": ""
+        },
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {
+          "Roguish Archetype Feature": ""
+        },
+        "Level 14": {
+          "Blindsense": ""
+        },
+        "Level 15": {
+          "Slippery Mind": ""
+        },
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {
+          "Roguish Archetype Feature": ""
+        },
+        "Level 18": {
+          "Elusive": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Cunning Action": ""
+        },
+        "Level 20": {
+          "Stroke of Luck": ""
+        },
+        "Level 3": {
+          "Roguish Archetype": ""
+        },
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {
+          "Uncanny Dodge": ""
+        },
+        "Level 6": {
+          "Expertise": ""
+        },
+        "Level 7": {
+          "Evasion": ""
+        },
+        "Level 8": {
+          "Ability Score Improvement": ""
+        },
+        "Level 9": {
+          "Roguish Archetype Feature": ""
+        }
+      },
       "Hit Die": "d8",
       "Proficiencies": {
         "Armor": [
@@ -319,6 +878,57 @@
       ]
     },
     "Sorcerer": {
+      "Features": {
+        "Level 1": {
+          "Sorcerous Origin": "",
+          "Spellcasting": ""
+        },
+        "Level 10": {
+          "Metamagic": ""
+        },
+        "Level 11": {},
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {},
+        "Level 14": {
+          "Sorcerous Origin Feature": ""
+        },
+        "Level 15": {},
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {
+          "Metamagic": ""
+        },
+        "Level 18": {
+          "Sorcerous Origin Feature": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Font of Magic": ""
+        },
+        "Level 20": {
+          "Sorcerous Restoration": ""
+        },
+        "Level 3": {
+          "Metamagic": ""
+        },
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {},
+        "Level 6": {
+          "Sorcerous Origin Feature": ""
+        },
+        "Level 7": {},
+        "Level 8": {
+          "Ability Score Improvement": ""
+        },
+        "Level 9": {}
+      },
       "Hit Die": "d6",
       "Proficiencies": {
         "Armor": [],
@@ -345,6 +955,61 @@
       ]
     },
     "Warlock": {
+      "Features": {
+        "Level 1": {
+          "Otherworldly Patron": "",
+          "Pact Magic": ""
+        },
+        "Level 10": {
+          "Otherworldly Patron Feature": ""
+        },
+        "Level 11": {
+          "Mystic Arcanum": ""
+        },
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {
+          "Mystic Arcanum": ""
+        },
+        "Level 14": {
+          "Otherworldly Patron Feature": ""
+        },
+        "Level 15": {
+          "Mystic Arcanum": ""
+        },
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {
+          "Mystic Arcanum": ""
+        },
+        "Level 18": {},
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Eldritch Invocations": ""
+        },
+        "Level 20": {
+          "Eldritch Master": ""
+        },
+        "Level 3": {
+          "Pact Boon": ""
+        },
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {},
+        "Level 6": {
+          "Otherworldly Patron Feature": ""
+        },
+        "Level 7": {},
+        "Level 8": {
+          "Ability Score Improvement": ""
+        },
+        "Level 9": {}
+      },
       "Hit Die": "d8",
       "Proficiencies": {
         "Armor": [
@@ -370,6 +1035,53 @@
       ]
     },
     "Wizard": {
+      "Features": {
+        "Level 1": {
+          "Arcane Recovery": "",
+          "Spellcasting": ""
+        },
+        "Level 10": {
+          "Arcane Tradition Feature": ""
+        },
+        "Level 11": {},
+        "Level 12": {
+          "Ability Score Improvement": ""
+        },
+        "Level 13": {},
+        "Level 14": {
+          "Arcane Tradition Feature": ""
+        },
+        "Level 15": {},
+        "Level 16": {
+          "Ability Score Improvement": ""
+        },
+        "Level 17": {},
+        "Level 18": {
+          "Spell Mastery": ""
+        },
+        "Level 19": {
+          "Ability Score Improvement": ""
+        },
+        "Level 2": {
+          "Arcane Tradition": ""
+        },
+        "Level 20": {
+          "Signature Spells": ""
+        },
+        "Level 3": {},
+        "Level 4": {
+          "Ability Score Improvement": ""
+        },
+        "Level 5": {},
+        "Level 6": {
+          "Arcane Tradition Feature": ""
+        },
+        "Level 7": {},
+        "Level 8": {
+          "Ability Score Improvement": ""
+        },
+        "Level 9": {}
+      },
       "Hit Die": "d6",
       "Proficiencies": {
         "Armor": [],

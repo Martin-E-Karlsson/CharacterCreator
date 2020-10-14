@@ -61,7 +61,7 @@ def fetch_value(data, keys):
         if keys else data
 
 
-def run():  # TODO: Add more values.
+def run():  # TODO: Fill out the Class Features with text.
     with open('dnd5e.json') as f:
         json_data = json.load(f)
 
@@ -73,14 +73,12 @@ def run():  # TODO: Add more values.
     for i in range(1, 21):
         add_empty_dict(json_data, ["Features", f"Level {i}"])
 
-    print(json_data)
-
     # add_empty_dict(json_data, ["Class", "Barbarian", "Features"], {"Features": {"Level 1": {}}})
 
     # test_dict = add_list_to_classes(data_in, ["Features", "Level 1"])
 
-    # with open('dnd5e.json', 'w') as f:
-    #     json.dump(data_out, f, indent=2, sort_keys=True)
+    with open('dnd5e.json', 'w') as f:
+        json.dump(json_data, f, indent=2, sort_keys=True)
 
 
 def main():
