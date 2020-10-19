@@ -62,12 +62,12 @@ def fetch_value(data, keys):
 
 
 def run():  # TODO: Fill out the Class Features with text. Replace all ’ with '.
-    with open('dnd5e.json') as f:
+    with open('dnd5e.json', encoding='utf-8') as f:
         json_data = json.load(f)
 
     # print(json_data["Class"]["Cleric"]["Features"]["Level 5"]["Destroy Undead"])
     # print(json_data["Class"]["Druid"]["Features"]["Level 2"]["Wild Shape"])
-    print(json_data["Class"]["Paladin"]["Features"]["Level 2"]["Divine Smite"])
+    print(json_data["Class"]["Rogue"]["Features"]["Level 1"]["Expertise"])
 
     # data_out = add_list_to_classes(data_in, ["Proficiencies", "Skills"])
 
