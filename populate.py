@@ -117,8 +117,6 @@ def run():
     # for i in range(1, 21):
     #     add_empty_dict(json_data, ["Features", f"Level {i}"])
 
-    add_empty_dict(json_data, ["Archetypes"])
-
     # test_dict = add_list_to_classes(data_in, ["Features", "Level 1"])
 
     with open('dnd5e.json', 'w', encoding='utf-8') as f:
