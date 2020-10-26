@@ -7,7 +7,10 @@ class Creator:  # TODO: To contain the core loop of the program
 
 
 def run():
-    pass
+    new_character = Character()
+    print(new_character.race)
+    print(new_character.gender)
+    print(new_character.first_name + " " + new_character.last_name)
 
 
 def main():
