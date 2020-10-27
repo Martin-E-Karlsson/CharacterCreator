@@ -5704,7 +5704,7 @@
             }
           }
         },
-        "Languages": "You can speak, read, and write Common and Draconic. Draconic is thought to be one of the oldest languages and is often used in the study of magic. The language sounds harsh to most other creatures and includes numerous hard consonants and sibilants.",
+        "Languages": ["Common", "Draconic"],
         "Size": {
           "Category": "Medium",
           "Height (cm)": {
@@ -5784,7 +5784,7 @@
         "Darkvision": "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
         "Dwarven Combat Training": "You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.",
         "Dwarven Resilience": "You have advantage on saving throws against poison, and you have resistance against poison damage.",
-        "Languages": "You can speak, read, and write Common and Dwarvish. Dwarvish is full of hard consonants and guttural sounds, and those characteristics spill over into whatever other language a dwarf might speak.",
+        "Languages": ["Common", "Dwarvish"],
         "Size": {
           "Category": "Medium",
           "Height (cm)": {
@@ -5879,7 +5879,7 @@
         "Darkvision": "Accustomed to twilit forests and the night sky, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
         "Fey Ancestry": "You have advantage on saving throws against being charmed, and magic can't put you to sleep.",
         "Keen Senses": "You have proficiency in the Perception skill.",
-        "Languages": "You can speak, read, and write Common and Elvish. Elvish is fluid, with subtle intonations and intricate grammar. Elven literature is rich and varied, and their songs and poems are famous among other races. Many bards learn their language so they can add Elvish ballads to their repertoires.",
+        "Languages": ["Common, Elvish"],
         "Size": {
           "Category": "Medium",
           "Height (cm)": {
@@ -5969,7 +5969,7 @@
         "Alignment": "Any",
         "Darkvision": "Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
         "Gnome Cunning": "You have advantage on all Intelligence, Wisdom, and Charisma saving throws against magic.",
-        "Languages": "You can speak, read, and write Common and Gnomish. The Gnomish language, which uses the Dwarvish script, is renowned for its technical treatises and its catalogs of knowledge about the natural world.",
+        "Languages": ["Common", "Gnomish"],
         "Size": {
           "Category": "Small",
           "Height (cm)": {
@@ -6035,7 +6035,7 @@
         "Alignment": "Any",
         "Darkvision": "Thanks to your elf blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
         "Fey Ancestry": "You have advantage on saving throws against being charmed, and magic can't put you to sleep.",
-        "Languages": "You can speak, read, and write Common, Elvish, and one extra language of your choice.",
+        "Languages": ["Common", "Elvish", "One language of your choice"],
         "Size": {
           "Category": "Medium",
           "Height (cm)": {
@@ -6101,7 +6101,7 @@
         },
         "Alignment": "Any",
         "Darkvision": "Thanks to your orc blood, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
-        "Languages": "You can speak, read, and write Common and Orc. Orc is a harsh, grating language with hard consonants. It has no script of its own but is written in the Dwarvish script.",
+        "Languages": ["Common", "Orc"],
         "Menacing": "You gain proficiency in the Intimidation skill.",
         "Relentless Endurance": "When you are reduced to 0 hit points but not killed outright, you can drop to 1 hit point instead. You can't use this feature again until you finish a long rest.",
         "Savage Attacks": "When you score a critical hit with a melee weapon attack, you can roll one of the weapon's damage dice one additional time and add it to the extra damage of the critical hit.",
@@ -6189,7 +6189,7 @@
         "Alignment": "Any",
         "Brave": "You have advantage on saving throws against being frightened.",
         "Halfling Nimbleness": "You can move through the space of any creature that is of a size larger than yours.",
-        "Languages": "You can speak, read, and write Common and Halfling. The Halfling language isn't secret, but halflings are loath to share it with others. They write very little, so they don't have a rich body of literature. Their oral tradition, however, is very strong. Almost all halflings speak Common to converse with the people in whose lands they dwell or through which they are traveling.",
+        "Languages": ["Common", "Halfling"],
         "Lucky": "When you roll a 1 on the d20 for an attack roll, ability check, or saving throw, you can reroll the die and must use the new roll.",
         "Size": {
           "Category": "Small",
@@ -6258,7 +6258,7 @@
           "Low": 18
         },
         "Alignment": "Any",
-        "Languages": "You can speak, read, and write Common and one extra language of your choice. Humans typically learn the languages of other peoples they deal with, including obscure dialects. They are fond of sprinkling their speech with words borrowed from other tongues: Orc curses, Elvish musical expressions, Dwarvish military phrases, and so on.",
+        "Languages": ["Common", "One language of your choice"],
         "Size": {
           "Category": "Medium",
           "Height (cm)": {
@@ -6325,7 +6325,7 @@
         "Darkvision": "Thanks to your infernal heritage, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.",
         "Hellish Resistance": "You have resistance to fire damage.",
         "Infernal Legacy": "You know the *thaumaturgy* cantrip. When you reach 3rd level, you can cast the *hellish rebuke* spell as a 2nd-level spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the *darkness* spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
-        "Languages": "You can speak, read, and write Common and Infernal.",
+        "Languages": ["Common", "Infernal"],
         "Size": {
           "Category": "Medium",
           "Height (cm)": {
