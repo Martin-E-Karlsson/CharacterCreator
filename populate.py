@@ -54,6 +54,21 @@ def add_list_to_classes(json_data, path):
     return json_data
 
 
+def test_spell_compatibility(json_data):
+    for dnd_class in list(json_data["Classes"].keys()):
+        if dnd_class not in ["Barbarian", "Fighter", "Rogue", "Monk"]:
+            for spell_level in list(json_data["Classes"][dnd_class]["Spell List"]["Spell Level"].keys()):
+                for class_spell in json_data["Classes"][dnd_class]["Spell List"]["Spell Level"][spell_level]:
+                    spell_found = False
+                    for spell in json_data["Spells"]:
+                        if spell["name"] == class_spell:
+                            spell_found = True
+                    if not spell_found:
+                        print(f"{class_spell} from {dnd_class} on spell level {spell_level} was not found in the list of spells!")
+            print(f"{dnd_class} checked!")
+
+
+
 def add_resource_dicts_to_classes(json_data):
     for class_key in json_data["Class"].keys():
         json_data["Class"][class_key].setdefault("Resources", {})
@@ -113,6 +128,8 @@ def run():
     # data_out = add_list_to_classes(data_in, ["Proficiencies", "Skills"])
 
     # add_resource_dicts_to_classes(json_data)
+
+    test_spell_compatibility(json_data)
 
     # for i in range(1, 21):
     #     add_empty_dict(json_data, ["Features", f"Level {i}"])

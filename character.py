@@ -32,11 +32,139 @@ class Character:
         self.languages = DND5E_DICT["Races"][self.race]["Traits"]["Languages"]
         self.alignment = choice(ALIGNMENTS)
         self.deity = get_deity(self.alignment)
+        self.speed = DND5E_DICT["Races"][self.race]["Traits"]["Speed"]
+        self.racial_ability_score_bonus = get_racial_ability_score_bonus(self.race, self.subrace)
+        self.racial_bonuses = get_racial_bonuses(self.race, self.subrace, self.skin_color)
 
 
 class Adventurer(Character):
     def __init__(self):
         super().__init__()
+        self.dnd_class = choice(CLASSES)
+        self.level = randrange(1, 21)
+        self.archetype = choice(list(DND5E_DICT["Classes"][self.dnd_class]["Archetypes"].keys()))
+        self.class_features = {}
+        self.ability_score_pool = 0
+        self.add_class_features()
+        self.strength = 0
+        self.dexterity = 0
+        self.constitution = 0
+        self.intelligence = 0
+        self.wisdom = 0
+        self.charisma = 0
+        self.roll_ability_scores()
+        self.add_ability_score_bonuses()
+        self.inspiration = choice([0, 1])
+        self.hit_die = int(DND5E_DICT["Classes"][self.dnd_class]["Hit Die"][1:])
+        self.max_hit_points = self.roll_hit_points()
+        self.proficiency_bonus = int(DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]
+                                     ["Proficiency Bonus"][1:])
+        # if self.dnd_class in SPELL_CASTING_CLASSES:
+        #     self.known
+
+    @property
+    def strength_modifier(self):
+        return (self.strength - 10) // 2
+
+    @property
+    def constitution_modifier(self):
+        return (self.constitution - 10) // 2
+
+    @property
+    def dexterity_modifier(self):
+        return (self.dexterity - 10) // 2
+
+    @property
+    def intelligence_modifier(self):
+        return (self.intelligence - 10) // 2
+
+    @property
+    def wisdom_modifier(self):
+        return (self.wisdom - 10) // 2
+
+    @property
+    def charisma_modifier(self):
+        return (self.charisma - 10) // 2
+
+    def add_class_features(self):
+        for level in DND5E_DICT["Classes"][self.dnd_class]["Features"]:
+            if int(level[6:]) <= self.level:
+                class_feature_items = DND5E_DICT["Classes"][self.dnd_class]["Features"][level].items()
+                for feature, description in class_feature_items:
+                    if feature != "Ability Score Improvement":
+                        self.class_features.update({feature: description})
+                    else:
+                        self.ability_score_pool += 2
+        for level in DND5E_DICT["Classes"][self.dnd_class]["Archetypes"][self.archetype]:
+            if int(level[6:]) <= self.level:
+                archetype_feature_items = DND5E_DICT["Classes"][self.dnd_class]["Archetypes"][self.archetype][level].items()
+                self.class_features.update({feature: description for feature, description in archetype_feature_items if feature != "Ability Score Improvement"})
+
+    def roll_ability_scores(self):
+        ability_scores = [
+            sum(roll_dice(4, 6)[1:]),
+            sum(roll_dice(4, 6)[1:]),
+            sum(roll_dice(4, 6)[1:]),
+            sum(roll_dice(4, 6)[1:]),
+            sum(roll_dice(4, 6)[1:]),
+            sum(roll_dice(4, 6)[1:]),
+        ]
+        self.distribute_ability_scores(ability_scores)
+
+    def distribute_ability_scores(self, ability_scores):
+        for pos, ability in enumerate(CLASS_ABILITY_SCORE_PRIORITY[self.dnd_class]):
+            if ability == "Str":
+                self.strength = ability_scores[pos]
+            elif ability == "Con":
+                self.constitution = ability_scores[pos]
+            elif ability == "Dex":
+                self.dexterity = ability_scores[pos]
+            elif ability == "Int":
+                self.intelligence = ability_scores[pos]
+            elif ability == "Wis":
+                self.wisdom = ability_scores[pos]
+            elif ability == "Cha":
+                self.charisma = ability_scores[pos]
+
+    def add_ability_score_bonuses(self):
+        self.add_racial_ability_score_bonuses()
+        self.spend_ability_score_pool()
+
+    def add_racial_ability_score_bonuses(self):
+        for ability in self.racial_ability_score_bonus:
+            if ability == "Strength":
+                self.strength += self.racial_ability_score_bonus[ability]
+            elif ability == "Constitution":
+                self.constitution += self.racial_ability_score_bonus[ability]
+            elif ability == "Dexterity":
+                self.dexterity += self.racial_ability_score_bonus[ability]
+            elif ability == "Intelligence":
+                self.intelligence += self.racial_ability_score_bonus[ability]
+            elif ability == "Wisdom":
+                self.wisdom += self.racial_ability_score_bonus[ability]
+            elif ability == "Charisma":
+                self.charisma += self.racial_ability_score_bonus[ability]
+            elif ability == "Any":
+                self.ability_score_pool += self.racial_ability_score_bonus["Any"]
+
+    def spend_ability_score_pool(self):
+        ability_scores = [
+            self.strength,
+            self.constitution,
+            self.dexterity,
+            self.intelligence,
+            self.wisdom,
+            self.charisma
+        ]
+        ability_scores.sort(reverse=True)
+        for pos, score in enumerate(ability_scores):
+            while ability_scores[pos] < 20 and self.ability_score_pool > 0:
+                ability_scores[pos] += 1
+                self.ability_score_pool -= 1
+        self.distribute_ability_scores(ability_scores)
+
+    def roll_hit_points(self):
+        return self.hit_die + sum(roll_dice(self.level-1, self.hit_die)) + self.level * self.constitution_modifier
 
 
 class Bard(Adventurer):
@@ -92,6 +220,14 @@ class Warlock(Adventurer):
 class Wizard(Adventurer):
     def __init__(self):
         super().__init__()
+
+
+def roll_dice(amount, sides):
+    dice_result = []
+    for _ in range(amount):
+        dice_result.append(randrange(1, (sides+1)))
+    dice_result.sort()
+    return dice_result
 
 
 def get_skin_color(race, subrace):
@@ -166,3 +302,34 @@ def get_deity(alignment):
         return choice(NEUTRAL_EVIL_DEITIES)
     elif alignment == "Chaotic Evil":
         return choice(CHAOTIC_EVIL_DEITIES)
+
+
+def get_racial_ability_score_bonus(race, subrace):
+    ability_score_increase_dict = {}
+    for ability in DND5E_DICT["Races"][race]["Traits"]["Ability Score Increase"]:
+        ability_score_increase_dict.update({ability: DND5E_DICT["Races"][race]["Traits"]["Ability Score Increase"][ability]})
+    if subrace != "":
+        for ability in DND5E_DICT["Races"][race]["Subraces"][subrace]["Ability Score Increase"]:
+            ability_score_increase_dict.update({ability: DND5E_DICT["Races"][race]["Subraces"][subrace]
+            ["Ability Score Increase"][ability]})
+    return ability_score_increase_dict
+
+
+def get_racial_bonuses(race, subrace, skin_color):
+    racial_bonuses_dict = {}
+    for trait in DND5E_DICT["Races"][race]["Traits"]:
+        if trait not in ["Age", "Alignment", "Draconic Ancestry", "Languages", "Size", "Weight",
+                         "Ability Score Increase", "Speed"]:
+            racial_bonuses_dict.update({trait: DND5E_DICT["Races"][race]["Traits"][trait]})
+    if subrace != "":
+        for trait in DND5E_DICT["Races"][race]["Subraces"][subrace]:
+            if trait != "Ability Score Increase":
+                racial_bonuses_dict.update({trait: DND5E_DICT["Races"][race]["Subraces"][subrace][trait]})
+    if race == "Dragonborn":
+        racial_bonuses_dict.update({"Draconic Ancestry": {}})
+        for key, value in DND5E_DICT["Races"][race]["Traits"]["Draconic Ancestry"].items():
+            if key != "Type":
+                racial_bonuses_dict["Draconic Ancestry"].update({key: value})
+        racial_bonuses_dict["Draconic Ancestry"].update({"Breath Weapon Details": DND5E_DICT["Races"][race]["Traits"]
+        ["Draconic Ancestry"]["Type"][skin_color]})
+    return racial_bonuses_dict

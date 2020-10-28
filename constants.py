@@ -59,3 +59,21 @@ LAWFUL_EVIL_DEITIES = ["Bane", "Loviatar", "Surtur", "Hades", "Sobek"]
 NEUTRAL_EVIL_DEITIES = ["Auril", "Bhaal", "Myrkul", "Shar", "Aegir", "Hel", "Apep", "Math Mathonwy"]
 CHAOTIC_EVIL_DEITIES = ["Cyric", "Beshaba", "Malar", "Talona", "Talos", "Umberlee", "Loki", "Thrym", "Ares", "Hecate",
                         "Set", "Morrigan"]
+
+CLASSES = ["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Ranger", "Rogue", "Sorcerer",
+           "Warlock", "Wizard"]
+CLASS_ABILITY_SCORE_PRIORITY = {
+    "Barbarian": ["Str", "Con", "Dex", "Wis", "Cha", "Int"],
+    "Bard": ["Cha", "Dex", "Con", "Wis", "Str", "Int"],
+    "Cleric": ["Wis", "Con", "Str", "Dex", "Cha", "Int"],
+    "Druid": ["Wis", "Con", "Dex", "Int", "Cha", "Str"],
+    "Fighter": ["Str", "Con", "Dex", "Wis", "Cha", "Int"],
+    "Monk": ["Dex", "Wis", "Con", "Str", "Cha", "Int"],
+    "Paladin": ["Str", "Con", "Dex", "Cha", "Wis", "Int"],
+    "Ranger": ["Dex", "Con", "Wis", "Str", "Cha", "Int"],
+    "Rogue": ["Dex", "Con", "Cha", "Wis", "Int", "Str"],
+    "Sorcerer": ["Cha", "Con", "Dex", "Wis", "Int", "Str"],
+    "Warlock": ["Cha", "Con", "Dex", "Wis", "Str", "Int"],
+    "Wizard": ["Int", "Dex", "Con", "Wis", "Cha", "Str"]
+}
+SPELL_CASTING_CLASSES = ["Bard", "Cleric", "Druid", "Paladin", "Ranger", "Sorcerer", "Warlock", "Wizard"]
