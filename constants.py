@@ -77,3 +77,11 @@ CLASS_ABILITY_SCORE_PRIORITY = {
     "Wizard": ["Int", "Dex", "Con", "Wis", "Cha", "Str"]
 }
 SPELL_CASTING_CLASSES = ["Bard", "Cleric", "Druid", "Paladin", "Ranger", "Sorcerer", "Warlock", "Wizard"]
+CLASSES_WITH_CANTRIPS = ["Bard", "Cleric", "Druid", "Sorcerer", "Warlock", "Wizard"]
+CLASSES_WITH_KNOWN_SPELLS = ["Bard", "Ranger", "Sorcerer", "Warlock"]
+CLASSES_WITH_PREPARED_SPELLS = ["Cleric", "Druid", "Paladin", "Wizard"]
+CARDINAL_TO_ORDINAL_NUMBERS = {1: "1st", 2: "2nd", 3: "3rd", 4: "4th", 5: "5th", 6: "6th", 7: "7th", 8: "8th", 9: "9th"}
+ORDINAL_TO_CARDINAL_NUMBERS = {"1st": 1, "2nd": 2, "3rd": 3, "4th": 4, "5th": 5, "6th": 6, "7th": 7, "8th": 8, "9th": 9}
+INTELLIGENCE_SPELL_CASTERS = ["Wizard"]
+WISDOM_SPELL_CASTERS = ["Cleric", "Druid", "Ranger"]
+CHARISMA_SPELL_CASTERS = ["Bard", "Paladin", "Sorcerer", "Warlock"]

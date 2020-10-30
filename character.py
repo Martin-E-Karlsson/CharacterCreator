@@ -24,7 +24,7 @@ class Character:
         if self.race == "Dragonborn":
             self.eye_color = self.skin_color
         else:
-            self.eye_color = get_hair_color(self.race, self.subrace)
+            self.eye_color = get_eye_color(self.race, self.subrace)
         self.accent = choice(ACCENTS)
         self.voice_type = choice(VOICE_TYPES)
         self.background = choice(BACKGROUNDS)
@@ -40,7 +40,7 @@ class Character:
 class Adventurer(Character):
     def __init__(self):
         super().__init__()
-        self.dnd_class = choice(CLASSES)
+        self.dnd_class = self.get_class()
         self.level = randrange(1, 21)
         self.archetype = choice(list(DND5E_DICT["Classes"][self.dnd_class]["Archetypes"].keys()))
         self.class_features = {}
@@ -57,10 +57,15 @@ class Adventurer(Character):
         self.inspiration = choice([0, 1])
         self.hit_die = int(DND5E_DICT["Classes"][self.dnd_class]["Hit Die"][1:])
         self.max_hit_points = self.roll_hit_points()
-        self.proficiency_bonus = int(DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]
-                                     ["Proficiency Bonus"][1:])
-        # if self.dnd_class in SPELL_CASTING_CLASSES:
-        #     self.known
+        self.armor_proficiencies = DND5E_DICT["Classes"][self.dnd_class]["Proficiencies"]["Armor"]
+        self.weapon_proficiencies = DND5E_DICT["Classes"][self.dnd_class]["Proficiencies"]["Weapons"]
+        self.tool_proficiencies = DND5E_DICT["Classes"][self.dnd_class]["Proficiencies"]["Tools"]
+        self.skill_proficiencies = DND5E_DICT["Classes"][self.dnd_class]["Proficiencies"]["Skills"]
+        self.saves = DND5E_DICT["Classes"][self.dnd_class]["Saves"]
+
+    @property
+    def proficiency_bonus(self):
+        return int(DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Proficiency Bonus"][1:])
 
     @property
     def strength_modifier(self):
@@ -85,6 +90,190 @@ class Adventurer(Character):
     @property
     def charisma_modifier(self):
         return (self.charisma - 10) // 2
+
+    @property
+    def strength_save_bonus(self):
+        if "Strength" in self.saves:
+            return self.proficiency_bonus + self.strength_modifier
+        else:
+            return self.strength_modifier
+
+    @property
+    def athletics_bonus(self):
+        if "Athletics" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.strength_modifier
+        else:
+            return self.strength_modifier
+
+    @property
+    def constitution_save_bonus(self):
+        if "Strength" in self.saves:
+            return self.proficiency_bonus + self.constitution_modifier
+        else:
+            return self.constitution_modifier
+
+    @property
+    def dexterity_save_bonus(self):
+        if "Dexterity" in self.saves:
+            return self.proficiency_bonus + self.dexterity_modifier
+        else:
+            return self.dexterity_modifier
+
+    @property
+    def acrobatics_bonus(self):
+        if "Acrobatics" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.dexterity_modifier
+        else:
+            return self.dexterity_modifier
+
+    @property
+    def sleight_of_hand_bonus(self):
+        if "Sleight of Hand" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.dexterity_modifier
+        else:
+            return self.dexterity_modifier
+
+    @property
+    def stealth_bonus(self):
+        if "Stealth" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.dexterity_modifier
+        else:
+            return self.dexterity_modifier
+
+    @property
+    def intelligence_save_bonus(self):
+        if "Intelligence" in self.saves:
+            return self.proficiency_bonus + self.intelligence_modifier
+        else:
+            return self.intelligence_modifier
+
+    @property
+    def arcana_bonus(self):
+        if "Arcana" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.intelligence_modifier
+        else:
+            return self.intelligence_modifier
+
+    @property
+    def history_bonus(self):
+        if "History" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.intelligence_modifier
+        else:
+            return self.intelligence_modifier
+
+    @property
+    def investigation_bonus(self):
+        if "Investigation" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.intelligence_modifier
+        else:
+            return self.intelligence_modifier
+
+    @property
+    def nature_bonus(self):
+        if "Nature" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.intelligence_modifier
+        else:
+            return self.intelligence_modifier
+
+    @property
+    def religion_bonus(self):
+        if "Arcana" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.intelligence_modifier
+        else:
+            return self.intelligence_modifier
+
+    @property
+    def wisdom_save_bonus(self):
+        if "Wisdom" in self.saves:
+            return self.proficiency_bonus + self.wisdom_modifier
+        else:
+            return self.wisdom_modifier
+
+    @property
+    def animal_handling_bonus(self):
+        if "Animal Handling" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.wisdom_modifier
+        else:
+            return self.wisdom_modifier
+
+    @property
+    def insight_bonus(self):
+        if "Insight" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.wisdom_modifier
+        else:
+            return self.wisdom_modifier
+
+    @property
+    def medicine_bonus(self):
+        if "Medicine" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.wisdom_modifier
+        else:
+            return self.wisdom_modifier
+
+    @property
+    def perception_bonus(self):
+        if "Perception" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.wisdom_modifier
+        else:
+            return self.wisdom_modifier
+
+    @property
+    def survival_bonus(self):
+        if "Survival" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.wisdom_modifier
+        else:
+            return self.wisdom_modifier
+
+    @property
+    def charisma_save_bonus(self):
+        if "Strength" in self.saves:
+            return self.proficiency_bonus + self.charisma_modifier
+        else:
+            return self.charisma_modifier
+
+    @property
+    def deception_bonus(self):
+        if "Deception" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.charisma_modifier
+        else:
+            return self.charisma_modifier
+
+    @property
+    def intimidation_bonus(self):
+        if "Intimidation" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.charisma_modifier
+        else:
+            return self.charisma_modifier
+
+    @property
+    def performance_bonus(self):
+        if "Performance" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.charisma_modifier
+        else:
+            return self.charisma_modifier
+
+    @property
+    def persuasion_bonus(self):
+        if "Persuasion" in self.skill_proficiencies:
+            return self.proficiency_bonus + self.charisma_modifier
+        else:
+            return self.charisma_modifier
+
+    @property
+    def initiative_bonus(self):
+        return self.dexterity_modifier
+
+    @property
+    def passive_perception(self):
+        return 10 + self.perception_bonus
+
+    def get_class(self):
+        if self.__class__.__name__ in ["Adventurer"]:
+            return choice(CLASSES)
+        elif self.__class__.__name__ in ["SpellCaster"]:
+            return choice(SPELL_CASTING_CLASSES)
+        else:
+            return self.__class__.__name__
 
     def add_class_features(self):
         for level in DND5E_DICT["Classes"][self.dnd_class]["Features"]:
@@ -167,17 +356,100 @@ class Adventurer(Character):
         return self.hit_die + sum(roll_dice(self.level-1, self.hit_die)) + self.level * self.constitution_modifier
 
 
-class Bard(Adventurer):
+class SpellCaster(Adventurer):
+    def __init__(self):
+        super().__init__()
+        self.known_spells = self.choose_spells()
+
+    @property
+    def spell_slots(self):
+        return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Spell Slots"]
+
+    @property
+    def number_of_cantrips_known(self):
+        if self.get_class() in CLASSES_WITH_CANTRIPS:
+            return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Cantrips Known"]
+        else:
+            return 0
+
+    @property
+    def number_of_spells_known(self):
+        if self.dnd_class in CLASSES_WITH_KNOWN_SPELLS:
+            return int(DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Spells Known"])
+        elif self.dnd_class in CLASSES_WITH_PREPARED_SPELLS:
+            if self.dnd_class in INTELLIGENCE_SPELL_CASTERS:
+                return self.intelligence_modifier + self.level
+            elif self.dnd_class in WISDOM_SPELL_CASTERS:
+                return self.wisdom_modifier + self.level
+            elif self.dnd_class in CHARISMA_SPELL_CASTERS:
+                return self.charisma_modifier + self.level
+
+    @property
+    def highest_spell_level_known(self):
+        count = 0
+        spell_slot_dict = DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Spell Slots"]
+        for spell_level in spell_slot_dict:
+            if spell_slot_dict[spell_level] != "":
+                count += 1
+        return count
+
+    @property
+    def spell_casting_ability_bonus(self):
+        if self.dnd_class in INTELLIGENCE_SPELL_CASTERS:
+            return self.intelligence_modifier
+        elif self.dnd_class in WISDOM_SPELL_CASTERS:
+            return self.wisdom_modifier
+        elif self.dnd_class in CHARISMA_SPELL_CASTERS:
+            return self.charisma_modifier
+
+    @property
+    def spell_save_dc(self):
+        return 8 + self.proficiency_bonus + self.spell_casting_ability_bonus
+
+    @property
+    def spell_attack_bonus(self):
+        return self.proficiency_bonus + self.spell_casting_ability_bonus
+
+    def choose_cantrips(self):
+        return choice(DND5E_DICT["Classes"][self.dnd_class]["Spell List"]["Spell Level"]["0"], self.number_of_cantrips_known)
+
+    def choose_spells(self):
+        list_of_known_spells = {}
+        for spell_level in range(1, self.highest_spell_level_known + 1):
+            list_of_known_spells.update({spell_level:[]})
+        spells_added = 0
+        while spells_added != self.number_of_spells_known:
+            for spell_level in list_of_known_spells:
+                if spells_added == self.number_of_spells_known:
+                    break
+                list_of_known_spells[spell_level].append(choice(DND5E_DICT["Classes"][self.dnd_class]["Spell List"]["Spell Level"][str(spell_level)]))
+                spells_added += 1
+        return list_of_known_spells
+
+
+class Barbarian(Adventurer):
+    def __init__(self):
+        super().__init__()
+
+    def rages(self):
+        return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Rages"]
+
+    def rage_damage(self):
+        return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Rage Damage"]
+
+
+class Bard(SpellCaster):
+    def __init__(self):
+        super().__init__()
+        self.known_cantrips = self.choose_cantrips()
+
+
+class Cleric(SpellCaster):
     def __init__(self):
         super().__init__()
 
 
-class Cleric(Adventurer):
-    def __init__(self):
-        super().__init__()
-
-
-class Druid(Adventurer):
+class Druid(SpellCaster):
     def __init__(self):
         super().__init__()
 
@@ -191,13 +463,22 @@ class Monk(Adventurer):
     def __init__(self):
         super().__init__()
 
+    def ki_points(self):
+        return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Ki Points"]
 
-class Paladin(Adventurer):
+    def martial_arts(self):
+        return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Martial Arts"]
+
+    def unarmored_movement(self):
+        return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Unarmored Movement"]
+
+
+class Paladin(SpellCaster):
     def __init__(self):
         super().__init__()
 
 
-class Ranger(Adventurer):
+class Ranger(SpellCaster):
     def __init__(self):
         super().__init__()
 
@@ -206,18 +487,27 @@ class Rogue(Adventurer):
     def __init__(self):
         super().__init__()
 
+    def sneak_attack(self):
+        return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Sneak Attack"]
 
-class Sorcerer(Adventurer):
+
+class Sorcerer(SpellCaster):
     def __init__(self):
         super().__init__()
 
+    def sorcery_points(self):
+        return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Sorcery Points"]
 
-class Warlock(Adventurer):
+
+class Warlock(SpellCaster):
     def __init__(self):
         super().__init__()
 
+    def number_of_invocations_known(self):
+        return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Invocations Known"]
 
-class Wizard(Adventurer):
+
+class Wizard(SpellCaster):
     def __init__(self):
         super().__init__()
 
