@@ -1,4 +1,4 @@
-# All constant variables are stored here.
+""" A storage space for external data and constants used in CharacterCreator. """
 import json
 
 with open('dnd5e.json', encoding='utf-8') as f:

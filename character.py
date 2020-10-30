@@ -226,7 +226,7 @@ class Adventurer(Character):
 
     @property
     def charisma_save_bonus(self):
-        if "Strength" in self.saves:
+        if "Charisma" in self.saves:
             return self.proficiency_bonus + self.charisma_modifier
         else:
             return self.charisma_modifier
@@ -411,7 +411,8 @@ class SpellCaster(Adventurer):
         return self.proficiency_bonus + self.spell_casting_ability_bonus
 
     def choose_cantrips(self):
-        return choice(DND5E_DICT["Classes"][self.dnd_class]["Spell List"]["Spell Level"]["0"], self.number_of_cantrips_known)
+        cantrips = DND5E_DICT["Classes"][self.dnd_class]["Spell List"]["Spell Level"]["0"]
+        return [choice(cantrips) for _ in range(int(self.number_of_cantrips_known))]
 
     def choose_spells(self):
         list_of_known_spells = {}
@@ -447,11 +448,13 @@ class Bard(SpellCaster):
 class Cleric(SpellCaster):
     def __init__(self):
         super().__init__()
+        self.known_cantrips = self.choose_cantrips()
 
 
 class Druid(SpellCaster):
     def __init__(self):
         super().__init__()
+        self.known_cantrips = self.choose_cantrips()
 
 
 class Fighter(Adventurer):
@@ -494,6 +497,7 @@ class Rogue(Adventurer):
 class Sorcerer(SpellCaster):
     def __init__(self):
         super().__init__()
+        self.known_cantrips = self.choose_cantrips()
 
     def sorcery_points(self):
         return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Sorcery Points"]
@@ -502,6 +506,7 @@ class Sorcerer(SpellCaster):
 class Warlock(SpellCaster):
     def __init__(self):
         super().__init__()
+        self.known_cantrips = self.choose_cantrips()
 
     def number_of_invocations_known(self):
         return DND5E_DICT["Classes"][self.dnd_class]["Resources"][f"Level {self.level}"]["Invocations Known"]
@@ -510,6 +515,7 @@ class Warlock(SpellCaster):
 class Wizard(SpellCaster):
     def __init__(self):
         super().__init__()
+        self.known_cantrips = self.choose_cantrips()
 
 
 def roll_dice(amount, sides):

@@ -68,7 +68,6 @@ def test_spell_compatibility(json_data):
             print(f"{dnd_class} checked!")
 
 
-
 def add_resource_dicts_to_classes(json_data):
     for class_key in json_data["Class"].keys():
         json_data["Class"][class_key].setdefault("Resources", {})
